@@ -4,6 +4,8 @@
 
 :root {
     --header-background: #10375c;
+    --body-font: "Sora", sans-serif;
+    --footer-font: "Open Sans", sans-serif;
 }
 
 html {
@@ -12,7 +14,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: "Sora", sans-serif;
+    font-family: var(--body-font);
 }
 
 /* Start---------------------------------------------- Common ----------------------------------------------Start */
@@ -70,6 +72,15 @@ a {
 .logo__brand--small {
     font-weight: 300;
     font-size: 1.2em;
+}
+
+/* Form */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* btn */
@@ -161,8 +172,8 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-/* Navbar */
 
+/* Navbar */
 .navbar__list {
     display: flex;
 }
@@ -428,7 +439,7 @@ a {
 /* Start---------------------------------------------- Feature ----------------------------------------------Start */
 
 .feature {
-    margin: 85px 0;
+    margin-top: 85px;
     padding: 85px 0;
 }
 
@@ -609,14 +620,14 @@ a {
 
 .news-item:hover {
     box-shadow: 0 18px 50px 0 rgba(0, 0, 0, 0.05);
-    transform: translateY(-16px);
+    transform: translateY(-10px);
 }
 
 .news-item:hover .news-item__body {
     border-color: transparent;
 }
 
-.news-item:hover .news-item__more {
+.news-item__more:hover {
     color: #2e80ce;
 }
 
@@ -662,3 +673,169 @@ a {
 }
 
 /* End---------------------------------------------- News ----------------------------------------------End */
+
+/* Start---------------------------------------------- Appointment ----------------------------------------------Start */
+
+.appointment {
+    margin-top: 85px;
+}
+
+.appointment__body {
+    padding: 100px 0;
+    background: #f6fbff;
+    text-align: center;
+    border-radius: 4px;
+}
+.appointment__heading {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.appointment__heading::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 136px;
+    height: 2px;
+    left: 517px;
+    bottom: 0;
+    background: #2e80ce;
+}
+
+.appointment__desc {
+    margin: 0 auto;
+    max-width: 617px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    margin-bottom: 38px;
+}
+
+/* End---------------------------------------------- Appointment ----------------------------------------------End */
+
+/* Start---------------------------------------------- Footer ----------------------------------------------Start */
+
+.footer {
+    margin-top: 170px;
+    padding: 100px 0 42px;
+    background: #10375c;
+    font-family: var(--footer-font);
+}
+
+.footer__logo {
+    font-family: var(--body-font);
+}
+
+.footer__row {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+    border-bottom: 1px solid #406181;
+}
+
+.footer__desc {
+    margin-top: 22px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #a9b3bb;
+}
+
+.footer__heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fff;
+}
+
+.footer__list {
+    margin-bottom: 28px;
+}
+
+.footer__link {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #a9b3bb;
+    white-space: nowrap;
+}
+
+.footer__link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer__item {
+    margin-bottom: 10px;
+}
+
+.footer__social {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 28px;
+}
+
+.footer__social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #2e80ce;
+    transition: 0.25s;
+}
+
+.footer__social-btn:hover {
+    background: #2e80ce;
+    color: #fff;
+}
+
+.footer__subscribe {
+    display: inline-block;
+    max-width: 273px;
+    white-space: wrap;
+}
+
+/* Footer Form */
+.footer-form {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.footer-form__input {
+    padding: 0 10px;
+    width: 212px;
+    height: 46px;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #406181;
+}
+
+.footer-form__input::placeholder {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #9ca8b1;
+}
+
+.footer-form__submit {
+    min-width: 108px;
+    --height: 46px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    background: #2e80ce;
+    color: #fff;
+}
+
+.footer__copy-right {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #aab3ba;
+}
+
+/* End---------------------------------------------- Footer ----------------------------------------------End */
